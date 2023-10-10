@@ -1,0 +1,29 @@
+<h2>Video Games Sales</h2>
+
+<ol>
+  <% @sales.each do | sa | %>
+  <article class="message is-dark">
+  <div class="message-header">
+    <h3><%= sa.games.name %></h3>
+  </div>
+
+  <div class="message-body">
+    <li>
+      Sales in North America (in millions): $<%= sa.na_sales %>
+    </li>
+
+      <li>
+      Sales in Europe (in millions): $<%= sa.eu_sales%>
+    </li>
+
+      <li>
+      Sales in Japan (in millions): $<%= sa.jp_sales%>
+    </li>
+
+      <li>
+      Sales in the rest of the world (in millions): $<%=sa.other_sales %>
+    </li>
+      </div>
+</article>
+  <% end %>
+</ol>

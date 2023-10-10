@@ -1,0 +1,19 @@
+<article class="message is-dark">
+  <div class="message-header">
+    <h1>Video Game Consoles</h1>
+  </div>
+
+  <div class="message-body">
+    <h1><%= @platform.name %></h1>
+  </div>
+
+  <div class="message-header">
+    <h1>Video Games playable in the <%= @platform.name %></h1> plataform:
+  </div>
+
+  <div class="message-body">
+    <% @platform.games.each do | game | %>
+      <li> <%= link_to game.name, game %> </li>
+    <% end %>
+  </div>
+</article>

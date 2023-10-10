@@ -1,0 +1,45 @@
+<h1 class="message-header"><%= game.name %></h1>
+
+  <article class="message is-dark">
+    <div class="message-header">
+      <strong>Rank:</strong>
+    </div>
+
+    <div class="message-body">
+      <%= game.rank %>
+    </div>
+  </article>
+
+  <article class="message is-dark">
+    <div class="message-header">
+      <p>Genre:</p>
+    </div>
+
+    <div class="message-body">
+      <%= game.genre %>
+    </div>
+  </article>
+
+  <article class="message is-dark">
+    <div class="message-header">
+      <p>Console:</p>
+    </div>
+
+    <div class="message-body">
+      <%= link_to game.platform.name, plataform_path(game.platform) %>
+    </div>
+  </article>
+
+    <article class="message is-dark">
+    <div class="message-header">
+      <p>Sales:</p>
+    </div>
+
+    <div class="message-body">
+      Sales in North America (in millions): <%= @sales.na_sales %> <br>
+      Sales in North Europe (in millions):  <br>
+      Sales in North Japan (in millions):   <br>
+      Other Sales (in millions):            <br>
+      Global Sales (in millions):           <br>
+    </div>
+  </article>

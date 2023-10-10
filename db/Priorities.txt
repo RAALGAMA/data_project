@@ -1,0 +1,16 @@
+Rank,Name,Platform,Year,Genre,Publisher,NA_Sales,EU_Sales,JP_Sales,Other_Sales,Global_Sales
+
+Table Games
+-Games_id,Rank,Name,Genre,Publisher_id,Platform_id
+
+Table Publisher (1 to many)
+-Publisher_id, Publisher
+
+Table Games_Sales
+-Games_Sales_id,Games_id, Sales_id
+
+Table Platform (1  to many)
+-Platform_id, Platform
+
+Table Sales
+-Sales_id,NA_Sales,EU_Sales,JP_Sales,Other_Sales,Global_Sales

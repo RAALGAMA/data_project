@@ -1,0 +1,19 @@
+<article class="message is-dark">
+  <div class="message-header">
+    <h1>Video Game Publishers</h1>
+  </div>
+
+  <div class="message-body">
+    <h1><%= @publisher.name %></h1>
+  </div>
+
+  <div class="message-header">
+    <h1>Video Games made by <%= @publisher.name %></h1>
+  </div>
+
+  <div class="message-body">
+    <% @publisher.games.each do | game | %>
+      <li> <%= link_to game.name, game %> </li>
+    <% end %>
+  </div>
+</article>

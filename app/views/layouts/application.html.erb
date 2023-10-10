@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DataProject2</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+  <section>
+    <div class="container">
+    <h1 class="title is-1">Highes Ranking Video Games in history</h1>
+    </div>
+    <%= yield %>
+
+  </section>
+    <%= render partial: 'common/footer'%>
+  </body>
+</html>

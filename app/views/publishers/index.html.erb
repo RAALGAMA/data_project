@@ -1,0 +1,9 @@
+<h2 class="title is-2">Video Games Publisher</h2>
+
+<ol>
+<% @publishers.each do | pu | %>
+  <li>
+     <%= link_to pu.name, publisher_path(pu) %>
+  </li>
+<% end %>
+</ol>

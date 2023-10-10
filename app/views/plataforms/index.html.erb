@@ -1,0 +1,9 @@
+<h2>Video Games Plataforms</h2>
+
+<ol>
+<% @platforms.each do | pl | %>
+  <li>
+     <%= link_to pl.name, plataform_path(pl) %>
+  </li>
+<% end %>
+</ol>

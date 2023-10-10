@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  na_sales: 1.5
+  eu_sales: 1.5
+  jp_sales: 1.5
+  other_sales: 1.5
+  global_sales: 1.5
+
+two:
+  na_sales: 1.5
+  eu_sales: 1.5
+  jp_sales: 1.5
+  other_sales: 1.5
+  global_sales: 1.5
