@@ -1,4 +1,4 @@
-<h1 class="message-header"><%= game.name %></h1>
+<h1 class="message-header"><%= link_to game.name, game %></h1>
 
   <article class="message is-dark">
     <div class="message-header">
@@ -36,10 +36,10 @@
     </div>
 
     <div class="message-body">
-      Sales in North America (in millions): <br>
-      Sales in North Europe (in millions):  <br>
-      Sales in North Japan (in millions):   <br>
-      Other Sales (in millions):            <br>
-      Global Sales (in millions):           <br>
+      Sales in North America (in millions): <%= game.sales %> <br>
+      Sales in North Europe (in millions): <%= game.sales %> <br>
+      Sales in North Japan (in millions): <%= game.sales %>  <br>
+      Other Sales (in millions):  <%= game.sales %>          <br>
+      Global Sales (in millions): <%= game.sales %>          <br>
     </div>
   </article>
