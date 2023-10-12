@@ -5,5 +5,6 @@ class Game < ApplicationRecord
   has_many :games_sales
   has_many :sales, through: :games_sales
 
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: true
+  validates :rank, presence: true
 end
