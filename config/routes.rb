@@ -14,9 +14,7 @@ Rails.application.routes.draw do
   resources :about, except: [:show]
   root to: "home#index"
   resources :games, only: %i[index show] do
-    collection do
-      get "search"
-    end
+    get "search", on: :collection
   end
   resources :publishers, only: %i[index show]
   resources :plataforms, only: %i[index show]
