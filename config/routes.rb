@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   #   get 'games/show'
   # get "pages/:permalink"
   resources :about, except: [:show]
+  get "pages/:permalink" => "pages#permalink, as: 'permalink"
   root to: "home#index"
   resources :games, only: %i[index show]
   resources :publishers, only: %i[index show]
