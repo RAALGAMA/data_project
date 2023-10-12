@@ -1,0 +1,10 @@
+<%= form_width(url:search_games_path, method: :get, local: true) do %>
+  <div class="field is-grouped mb-5">
+    <div class="control is-expanded">
+      <%= text_field_tag(:keyword, nil, class: "input", placeholder:"Search here")%>
+    </div>
+    <div>
+<%= submit_tab("Search", class: "button is-primary") %>
+    </div>
+  </div>
+<% end %>
