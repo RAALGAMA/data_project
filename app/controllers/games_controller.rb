@@ -11,7 +11,7 @@ class GamesController < ApplicationController
   end
 
   def search
-    wildcard_search = "%#{params[:keywords]}%"
+    wildcard_search = "%#{params[:keyword]}%"
     @games = Game.where("name LIKE ?", wildcard_search)
   end
 end

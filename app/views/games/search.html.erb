@@ -1,9 +1,10 @@
 <p>
-  Games found when searching for: <%= params[:search] %>
+  Games found when searching for: <%= params[:keyword] %>
 </p>
 <ul>
   <% @games.each do |g| %>
     <li>
       <%= link_to g.name, g%>
     </li>
+  <%end%>
 </ul>
