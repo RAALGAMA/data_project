@@ -1,34 +1,44 @@
-<h1 class="message-header"><%= link_to game.name, game %></h1>
+<!DOCTYPE html>
+<html lang="en">
 
-  <article class="message is-dark">
-    <div class="message-header">
-      <strong>Rank:</strong>
-    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title of your page</title>
+</head>
 
-    <div class="message-body">
-      <%= game.rank %>
-    </div>
-  </article>
+<body>
 
-  <article class="message is-dark">
-    <div class="message-header">
-      <p>Genre:</p>
-    </div>
+    <h1 class="message-header"><%= link_to game.name, game %></h1>
 
-    <div class="message-body">
-      <%= game.genre %>
-    </div>
-  </article>
+    <article class="message is-dark">
+        <div class="message-header">
+            <strong>Rank:</strong>
+        </div>
+        <div class="message-body">
+            <%= game.rank %>
+        </div>
+    </article>
 
-  <article class="message is-dark">
-    <div class="message-header">
-      <p>Console:</p>
-    </div>
+    <article class="message is-dark">
+        <div class="message-header">
+          <p>Genre:</p>
+        </div>
 
-    <div class="message-body">
-      <%= link_to game.platform.name, plataform_path(game.platform) %>
-    </div>
-  </article>
+        <div class="message-body">
+          <%= game.genre %>
+        </div>
+    </article>
+
+      <article class="message is-dark">
+        <div class="message-header">
+          <p>Console:</p>
+        </div>
+
+        <div class="message-body">
+          <%= link_to game.platform.name, plataform_path(game.platform) %>
+        </div>
+      </article>
 
     <article class="message is-dark">
     <div class="message-header">
@@ -43,3 +53,7 @@
       Global Sales (in millions): <%= game.sales %>          <br>
     </div>
   </article>
+
+</body>
+
+</html>
