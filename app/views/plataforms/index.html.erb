@@ -8,12 +8,14 @@
 </head>
 
 <body>
-    <h2>Video Games Platforms</h2>
+    <h1 class="message-header">Video Games Platforms</h1>
 
     <ol>
         <% @platforms.each do |pl| %>
         <li>
-            <%= link_to pl.name, plataform_path(pl) %>
+              <div class="message-body">
+                  <strong><%= link_to pl.name, plataform_path(pl) %></strong>
+              </div>
         </li>
         <% end %>
     </ol>
