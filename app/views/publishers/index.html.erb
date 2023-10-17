@@ -14,7 +14,9 @@
     <ol>
         <% @publishers.each do |pu| %>
         <li>
-            <%= link_to pu.name, publisher_path(pu) %>
+          <div class="message-body">
+            <strong><%= link_to pu.name, publisher_path(pu) %></strong>
+          </div>
         </li>
         <% end %>
     </ol>

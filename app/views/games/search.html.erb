@@ -1,10 +1,12 @@
-<p>
+<h1 class="title is-2">
   Games found when searching for: <%= params[:keyword] %>
-</p>
+</h1>
 <ul>
   <% @games.each do |g| %>
     <li>
-      <%= link_to g.name, g%>
+      <div class="message-body">
+        <%= link_to g.name, g%>
+      </div>
     </li>
   <%end%>
 </ul>
