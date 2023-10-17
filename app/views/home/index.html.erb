@@ -1,43 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
 <div class="columns">
   <div class="column">
-    <h2 class="title is-2">Top 10 Games</h2>
-    <ol class="ml-5">
-      <% @games.each do |game| %>
-        <li>
-          <%= link_to game.name, game %>
-          <em>(<%= game.genre %>)</em>
-        </li>
-      <% end %>
-    </ol>
-     <p class="mt-5">
-      <strong><%= link_to 'See the Top Games', games_path %></strong>
-    </p>
+    <section>
+      <h2 class="title is-2">Top 10 Games</h2>
+      <ol class="ml-5">
+        <% @games.each do |game| %>
+          <li>
+            <article>
+              <%= link_to game.name, game %>
+              <em>(<%= game.genre %>)</em>
+            </article>
+          </li>
+        <% end %>
+      </ol>
+      <p class="mt-5">
+        <strong><%= link_to 'See the Top Games', games_path %></strong>
+      </p>
+    </section>
   </div>
 
   <div class="column">
-    <h2 class="title is-2">Top 10 Publisher Companies</h2>
-    <ol class="ml-5">
-      <% @publishers.each do |publisher| %>
-        <li>
-          <%= link_to publisher.name, publisher %>
-        </li>
-      <% end %>
-    </ol>
-    <p class="mt-5">
-      <strong><%= link_to 'See the Top Companies', publishers_path %></strong>
-    </p>
+    <section>
+      <h2 class="title is-2">Top 10 Publisher Companies</h2>
+      <ol class="ml-5">
+        <% @publishers.each do |publisher| %>
+          <li>
+            <article>
+              <%= link_to publisher.name, publisher %>
+            </article>
+          </li>
+        <% end %>
+      </ol>
+      <p class="mt-5">
+        <strong><%= link_to 'See the Top Companies', publishers_path %></strong>
+      </p>
+    </section>
   </div>
+
   <div class="column">
-    <h2 class="title is-2">Top 10 Game Consoles</h2>
-    <ol class="ml-5">
-      <% @platforms.each do | pl | %>
-        <li>
-          <%= link_to pl.name, plataform_path(pl) %>
-        </li>
-      <% end %>
-    </ol>
-    <p class="mt-5">
-      <strong><%= link_to 'See the Top plataform', plataforms_path %></strong>
-    </p>
+    <section>
+      <h2 class="title is-2">Top 10 Game Consoles</h2>
+      <ol class="ml-5">
+        <% @platforms.each do | pl | %>
+          <li>
+            <article>
+              <%= link_to pl.name, platform_path(pl) %>
+            </article>
+          </li>
+        <% end %>
+      </ol>
+      <p class="mt-5">
+        <strong><%= link_to 'See the Top Platforms', platforms_path %></strong>
+      </p>
+    </section>
   </div>
 </div>
+</html>

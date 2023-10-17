@@ -1,19 +1,35 @@
-<article class="message is-dark">
-  <div class="message-header">
-    <h1>Video Game Publishers</h1>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
 
-  <div class="message-body">
-    <h1><%= @publisher.name %></h1>
-  </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Game Publishers</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Include your stylesheet here -->
+</head>
 
-  <div class="message-header">
-    <h1>Video Games made by <%= @publisher.name %></h1>
-  </div>
+<body>
+    <article class="message is-dark">
+        <div class="message-header">
+            <h1>Video Game Publishers</h1>
+        </div>
 
-  <div class="message-body">
-    <% @publisher.games.each do | game | %>
-      <li> <%= link_to game.name, game %> </li>
-    <% end %>
-  </div>
-</article>
+        <div class="message-body">
+            <h1><%= @publisher.name %></h1>
+        </div>
+
+        <div class="message-header">
+            <h1>Video Games made by <%= @publisher.name %></h1>
+        </div>
+
+        <div class="message-body">
+            <ul>
+                <% @publisher.games.each do |game| %>
+                <li><%= link_to game.name, game %></li>
+                <% end %>
+            </ul>
+        </div>
+    </article>
+</body>
+
+</html>

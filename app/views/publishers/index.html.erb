@@ -1,9 +1,23 @@
-<h2 class="title is-2">Video Games Publisher</h2>
+<!DOCTYPE html>
+<html lang="en">
 
-<ol>
-<% @publishers.each do | pu | %>
-  <li>
-     <%= link_to pu.name, publisher_path(pu) %>
-  </li>
-<% end %>
-</ol>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Games Publisher</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Include your stylesheet here -->
+</head>
+
+<body>
+    <h2 class="title is-2">Video Games Publisher</h2>
+
+    <ol>
+        <% @publishers.each do |pu| %>
+        <li>
+            <%= link_to pu.name, publisher_path(pu) %>
+        </li>
+        <% end %>
+    </ol>
+</body>
+
+</html>

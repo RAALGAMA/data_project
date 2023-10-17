@@ -1,19 +1,35 @@
-<article class="message is-dark">
-  <div class="message-header">
-    <h1>Video Game Consoles</h1>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
 
-  <div class="message-body">
-    <h1><%= @platform.name %></h1>
-  </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Game Consoles</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Include your stylesheet here -->
+</head>
 
-  <div class="message-header">
-    <h1>Video Games playable in the <%= @platform.name %></h1> plataform:
-  </div>
+<body>
+    <article class="message is-dark">
+        <div class="message-header">
+            <h1>Video Game Consoles</h1>
+        </div>
 
-  <div class="message-body">
-    <% @platform.games.each do | game | %>
-      <li> <%= link_to game.name, game %> </li>
-    <% end %>
-  </div>
-</article>
+        <div class="message-body">
+            <h1><%= @platform.name %></h1>
+        </div>
+
+        <div class="message-header">
+            <h1>Video Games playable in the <%= @platform.name %> platform:</h1>
+        </div>
+
+        <div class="message-body">
+            <ul>
+                <% @platform.games.each do |game| %>
+                <li><%= link_to game.name, game %></li>
+                <% end %>
+            </ul>
+        </div>
+    </article>
+</body>
+
+</html>

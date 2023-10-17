@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title of your page</title>
+    <title>Game</title>
 </head>
 
 <body>
 
-    <h1 class="message-header"><%= link_to game.name, game %></h1>
+    <h1 class="message-header"><%= raw(link_to sanitize(game.name), game) %></h1>
+
 
     <article class="message is-dark">
         <div class="message-header">
