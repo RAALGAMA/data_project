@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
   def index
-    @games = Game.includes(:platform, :publisher).all.limit(1000)
+    @games = Game.includes(:platform, :publisher).all.limit(10)
 
     puts @sales.inspect
   end

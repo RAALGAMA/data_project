@@ -1,39 +1,36 @@
-<h1 class="message-header"><%= game.name %></h1>
+<li class="message-header"><%= game.name %></li>
 
-    <article class="message is-dark">
-        <div class="message-header">
-            <strong>Rank:</strong>
-        </div>
-        <div class="message-body">
-            <%= game.rank %>
-        </div>
-    </article>
+  <li class="message is-dark">
+    <div class="message-header">
+      <strong>Rank:</strong>
+    </div>
+    <div class="message-body">
+      <%= game.rank %>
+    </div>
+  </li>
 
-    <article class="message is-dark">
-        <div class="message-header">
-          <p>Genre:</p>
-        </div>
+  <li class="message is-dark">
+    <div class="message-header">
+      <p>Genre:</p>
+    </div>
+    <div class="message-body">
+      <%= game.genre %>
+    </div>
+  </li>
 
-        <div class="message-body">
-          <%= game.genre %>
-        </div>
-    </article>
+  <li class="message is-dark">
+    <div class="message-header">
+      <p>Console:</p>
+    </div>
+    <div class="message-body">
+      <%= link_to game.platform.name, plataform_path(game.platform) %>
+    </div>
+  </li>
 
-      <article class="message is-dark">
-        <div class="message-header">
-          <p>Console:</p>
-        </div>
-
-        <div class="message-body">
-          <%= link_to game.platform.name, plataform_path(game.platform) %>
-        </div>
-      </article>
-
-    <article class="message is-dark">
+  <li class="message is-dark">
     <div class="message-header">
       <p>Sales:</p>
     </div>
-
     <div class="message-body">
       Sales in North America (in millions): <%= game.sales %> <br>
       Sales in North Europe (in millions): <%= game.sales %> <br>
@@ -41,4 +38,4 @@
       Other Sales (in millions):  <%= game.sales %>          <br>
       Global Sales (in millions): <%= game.sales %>          <br>
     </div>
-  </article>
+  </li>
