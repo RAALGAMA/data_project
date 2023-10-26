@@ -3,9 +3,28 @@
     <div class="control is-expanded">
       <%= text_field_tag(:keyword, nil, class: "input", placeholder:"Search here")%>
     </div>
-    <div>
+
     <br>
+      <div>
+        <select name="genre" class="input">
+          <option value="" disabled selected>Select Genre</option>
+          <option value="Sports">Sports</option>
+          <option value="Platform">Platform</option>
+          <option value="Racing">Racing</option>
+          <option value="Role-Playing">Role-Playing</option>
+          <option value="Puzzle">Puzzle</option>
+          <option value="Misc">Misc</option>
+          <option value="Shooter">Shooter</option>
+          <option value="Simulation">Simulation</option>
+          <option value="Action">Action</option>
+          <option value="Fighting">Fighting</option>
+          <option value="Adventure">Adventure</option>
+        </select>
+      </div>
+
+    <div>
 <%= submit_tag("Search!", class: "button is-primary") %>
     </div>
+
   </div>
 <% end %>

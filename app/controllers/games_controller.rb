@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
   def index
-    @games = Game.includes(:platform, :publisher).all.limit(1000)
+    @games = Game.includes(:platform, :publisher).all.limit(10)
 
     puts @sales.inspect
   end
@@ -12,6 +12,7 @@ class GamesController < ApplicationController
 
   def search
     wildcard_search = "%#{params[:keyword]}%"
-    @games = Game.where("name LIKE ?", wildcard_search)
+    genre = params[:genre]
+    @games = Game.where("name LIKE ?", wildcard_search).where(genre:)
   end
 end

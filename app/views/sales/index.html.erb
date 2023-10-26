@@ -1,45 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+<h2>Video Games Sales</h2>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Games Sales</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+<ol>
+  <% @sales.each do |sa| %>
+  <li>
+    <article class="message is-dark">
+      <div class="message-header">
+        <h3><%= "#{sa.games.name} #{sa}" %></h3>
+      </div>
 
-<body>
-    <h2>Video Games Sales</h2>
+      <div class="message-body">
+        <ul>
+          <li>
+            Sales in North America (in millions): $<%= sa.na_sales %>
+          </li>
 
-    <ol>
-        <% @sales.each do |sa| %>
-        <article class="message is-dark">
-            <div class="message-header">
-                <h3><%= sa.games.name %></h3>
-            </div>
+          <li>
+            Sales in Europe (in millions): $<%= sa.eu_sales %>
+          </li>
 
-            <div class="message-body">
-                <ul>
-                    <li>
-                        Sales in North America (in millions): $<%= sa.na_sales %>
-                    </li>
+          <li>
+            Sales in Japan (in millions): $<%= sa.jp_sales %>
+          </li>
 
-                    <li>
-                        Sales in Europe (in millions): $<%= sa.eu_sales %>
-                    </li>
-
-                    <li>
-                        Sales in Japan (in millions): $<%= sa.jp_sales %>
-                    </li>
-
-                    <li>
-                        Sales in the rest of the world (in millions): $<%= sa.other_sales %>
-                    </li>
-                </ul>
-            </div>
-        </article>
-        <% end %>
-    </ol>
-</body>
-
-</html>
+          <li>
+            Sales in the rest of the world (in millions): $<%= sa.other_sales %>
+          </li>
+        </ul>
+      </div>
+    </article>
+  </li>
+  <% end %>
+</ol>
